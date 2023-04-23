@@ -3,7 +3,7 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: black;
   padding: 50px;
-  justify-content: center;
+  margin: 0;
 }
 
 .resume {
@@ -13,19 +13,16 @@ body {
   flex-direction: row;
   justify-content: center;
   background-color: rgb(0, 0, 0);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  margin: auto;
 }
 
 .left-column {
   flex-basis: 30%;
-  padding-right: 20px;
 }
 
 .right-column {
-  flex-basis: 55%;
-  padding-left: 50px;
+  flex-basis: 60%;
+  padding-left: 80px;
 }
 
 h1 {
@@ -36,12 +33,12 @@ h1 {
 
 h2 {
   font-size: 24px;
-  margin-top: 30px;
+  margin-top: 20px;
   color: aliceblue;
 }
 
 p {
-  font-size: 16px;
+  font-size: 14px;
   color: rgb(0, 0, 0);
   font-weight: 400;
   background-color: rgba(255, 255, 255, 0.3);
@@ -49,6 +46,7 @@ p {
 
 blockquote {
   position: relative;
+  max-width: 600px;
   font-size: 24px;
   font-style: italic;
   padding: 10px;
@@ -62,14 +60,6 @@ blockquote::before {
   font-size: 60px;
   top: -20px;
   left: -10px;
-}
-
-blockquote::after {
-  content: "”";
-  position: absolute;
-  font-size: 60px;
-  bottom: -20px;
-  right: -10px;
 }
 
 ul {
@@ -91,7 +81,7 @@ li {
 .profile-pic {
   width: 100%;
   height: auto;
-  border-radius: 0%;
+  border-radius: 0;
 }
 
 .contact-info {
@@ -102,4 +92,66 @@ li {
   padding: 10px;
   z-index: 1;
   margin: 0 10px 10px;
+}
+
+img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  bottom: 80px;
+  right: 80px;
+  z-index: 1;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .resume {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .left-column {
+    width: 40%;
+    margin-right: 5%;
+  }
+
+  .right-column {
+    width: 55%;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    margin-top: -75px;
+    float: left;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 480px) {
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+  }
+
+  .logo {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
