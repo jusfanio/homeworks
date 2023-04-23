@@ -3,24 +3,29 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: black;
   padding: 50px;
+  justify-content: center;
 }
 
 .resume {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background-color: black;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .left-column {
-  flex-basis: 33.33%;
+  flex-basis: 30%;
+  padding-right: 20px;
 }
 
 .right-column {
-  flex-basis: 66.66%;
-  padding-left: 30px;
+  flex-basis: 55%;
+  padding-left: 50px;
 }
 
 h1 {
@@ -40,6 +45,31 @@ p {
   color: rgb(0, 0, 0);
   font-weight: 400;
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+blockquote {
+  position: relative;
+  font-size: 24px;
+  font-style: italic;
+  padding: 10px;
+  margin: 0;
+  color: rgb(52, 138, 225);
+}
+
+blockquote::before {
+  content: "“";
+  position: absolute;
+  font-size: 60px;
+  top: -20px;
+  left: -10px;
+}
+
+blockquote::after {
+  content: "”";
+  position: absolute;
+  font-size: 60px;
+  bottom: -20px;
+  right: -10px;
 }
 
 ul {
